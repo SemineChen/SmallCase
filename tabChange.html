@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tab的封装</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            list-style: none;
+            float: left;
+            padding-left: 10px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        
+        .container {
+            width: 1000px;
+            height: 500px;
+            background: #f4f4f4;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .changetab {
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+        }
+        
+        .changecon {
+            height: 450px;
+            background: #ffffff;
+            padding-top: 30px;
+        }
+        
+        .changecon ul {
+            height: 30px;
+        }
+        
+        .changetab li {
+            width: 14%;
+            height: 30px;
+        }
+        
+        .changetab .on {
+            background: #ffffff;
+            border-top: 3px solid green;
+            color: green;
+        }
+        
+        .changecon ul {
+            display: none;
+        }
+        
+        .changecon .on {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="changetab">
+            <ul>
+                <li class="on">我是tab1</li>
+                <li>我是tab1</li>
+                <li>我是tab2</li>
+                <li>我是tab3</li>
+                <li>我是tab4</li>
+            </ul>
+        </div>
+        <div class="changecon">
+            <ul class="on">
+                <li>内容1</li>
+            </ul>
+            <ul>
+                <li>内容2</li>
+            </ul>
+            <ul>
+                <li>内容3</li>
+            </ul>
+            <ul>
+                <li>内容4</li>
+            </ul>
+            <ul>
+                <li>内容5</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function() {
+                // $(".changetab li").click(function() {
+                //     $(this).addClass('on').siblings().removeClass("on")
+                //     var index = $(this).index()
+                //     $(".changecon ul").eq(index).addClass('on').siblings().removeClass("on")
+                // })
+                $(".changetab li").ChangeTab('on')
+            })
+            //封装代码
+        $.fn.extend({
+            ChangeTab: function(active) {
+                $(this).click(function() {
+                    $(this).addClass(active).siblings().removeClass(active)
+                    var index = $(this).index()
+                    $(".changecon ul").eq(index).addClass(active).siblings().removeClass(active)
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
