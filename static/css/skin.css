@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.skinicon {
+    width: 50px;
+    height: 50px;
+    background: #0bb3e6;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    bottom: 0px;
+    position: absolute;
+}
+
+.skincon {
+    width: 259px;
+    height: 100%;
+    background: #ffff;
+    float: right;
+    padding-left: 30px;
+    /* padding-top: 30px; */
+    padding-right: 30px;
+    z-index: 2;
+    position: relative;
+    overflow-y: auto;
+    display: none;
+}
+
+.layout,
+.colorskin,
+.fonfskin {
+    /* height: 500px; */
+    margin-top: 24px;
+}
+
+.layout li,
+.colorskin li,
+.fonfskin li {
+    float: left;
+    margin-top: 15px;
+    position: relative;
+}
+
+.layout li img {
+    width: 68px;
+    height: 68px;
+}
+
+h3.littletitle {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e0dfdf;
+    height: 39px;
+    color: #51595a;
+}
+
+.skin {
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.scrip {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+
+.skinbox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.ctrlmask {
+    height: 100%;
+    width: 50px;
+    float: right;
+    position: relative;
+    z-index: 2;
+}
+
+.btn input {
+    width: 180px;
+    height: 34px;
+    background: #1e66b1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 26px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn input:hover {
+    background: #0bb3e6;
+}
+
+.color1 {
+    background: #60bafd;
+}
+
+.color2 {
+    background: #1e66b1;
+}
+
+.color3 {
+    background: #49c5b6;
+}
+
+.color4 {
+    background: #50d38a;
+}
+
+.color5 {
+    background: #ffc323;
+}
+
+.color6 {
+    background: #ff758e;
+}
+
+.skinicon i {
+    color: white;
+}
+
+.skin.choose {
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+
+.choose i {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 25px;
+    left: 23px;
+}
+
+.choose .zhezhao {
+    background: #092f4a;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+
+.skincon ul li .on {
+    display: block;
+}
+
+body {
+    overflow: hidden;
+}
